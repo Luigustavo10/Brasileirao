@@ -1,0 +1,222 @@
+const dados = [
+    {
+        titulo: 'Botafogo',
+        descricao: 'O Botafogo de Futebol e Regatas é um dos clubes mais tradicionais do Brasil, com sede no Rio de Janeiro.',
+        classificacao: 1,
+        titulosBrasileiros: 2,
+        libertadores: 0,
+        mundiais: 0,
+        cores: '#000000',
+        escudo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/Botafogo_de_Futebol_e_Regatas_logo.svg/120px-Botafogo_de_Futebol_e_Regatas_logo.svg.png',
+        tags: ['fogão', 'bfr', 'glorioso', 'botafogo']
+    },
+    {
+        titulo: 'Fortaleza',
+        descricao: 'O Fortaleza Esporte Clube, também conhecido como Leão do Pici, é um clube cearense de grande relevância no cenário nacional.',
+        classificacao: 2,
+        titulosBrasileiros: 0,
+        libertadores: 0,
+        mundiais: 0,
+        cores: '#002366',
+        escudo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Fortaleza_EC_2018.png/120px-Fortaleza_EC_2018.png',
+        tags: ['leão', 'leão do pici', 'leao', 'forte leão', 'fortaleza']
+    },
+    {
+        titulo: 'Palmeiras',
+        descricao: 'A Sociedade Esportiva Palmeiras, também conhecido como Verdão, é um dos maiores clubes do Brasil, com grande destaque nacional e internacional.',
+        classificacao: 3,
+        titulosBrasileiros: 11,
+        libertadores: 3,
+        mundiais: 0,
+        cores: '#006633',
+        escudo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/Palmeiras_logo.svg/120px-Palmeiras_logo.svg.png',
+        tags: ['verdao', 'sep', 'palestra', 'palmeiras', 'porco']
+    },
+    {
+        titulo: 'Flamengo',
+        descricao: 'O Clube de Regatas do Flamengo, também conhecido como Mengão, é um dos clubes mais populares do Brasil.',
+        classificacao: 4,
+        titulosBrasileiros: 8,
+        libertadores: 3,
+        mundiais: 1,
+        cores: '#dc143c',
+        escudo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/Flamengo_braz_logo.svg/1200px-Flamengo_braz_logo.svg.png',
+        tags: ['mengao', 'crf', 'rubro-negro', 'flamengo']
+    },
+    {
+        titulo: 'Cruzeiro',
+        descricao: 'O Cruzeiro Esporte Clube, conhecido como Raposa, é um dos clubes mais vitoriosos do Brasil.',
+        classificacao: 5,
+        titulosBrasileiros: 4,
+        libertadores: 2,
+        mundiais: 0,
+        cores: '#0033cc',
+        escudo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Brasao_do_Sao_Paulo_Futebol_Clube.svg/120px-Brasao_do_Sao_Paulo_Futebol_Clube.svg.png',
+        tags: ['raposa', 'cec', 'cruzeiro', 'celeste']
+    },
+    {
+        titulo: 'São Paulo',
+        descricao: 'O São Paulo Futebol Clube é um dos maiores clubes do Brasil, reconhecido pelo seu histórico de vitórias e títulos internacionais.',
+        classificacao: 6,
+        titulosBrasileiros: 6,
+        libertadores: 3,
+        mundiais: 3,
+        cores: '#ff0000',
+        escudo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Brasao_do_Sao_Paulo_Futebol_Clube.svg/120px-Brasao_do_Sao_Paulo_Futebol_Clube.svg.png',
+        tags: ['tricolor', 'spfc', 'soberano', 'sao paulo', 'tricolor paulista']
+    },
+    {
+        titulo: 'Bahia',
+        descricao: 'O Esporte Clube Bahia, também conhecido como Esquadrão de Aço, é um dos principais clubes do nordeste brasileiro.',
+        classificacao: 7,
+        titulosBrasileiros: 2,
+        libertadores: 0,
+        mundiais: 0,
+        cores: '#0033cc',
+        escudo: 'https://upload.wikimedia.org/wikipedia/pt/thumb/9/90/ECBahia.png/130px-ECBahia.png',
+        tags: ['bahia', 'esquadrão', 'ecbahia', 'tricolor de aço']
+    },
+    {
+        titulo: 'Vasco da Gama',
+        descricao: 'O Club de Regatas Vasco da Gama, também conhecido como Gigante da Colina, é um dos clubes mais tradicionais do Brasil.',
+        classificacao: 8,
+        titulosBrasileiros: 4,
+        libertadores: 1,
+        mundiais: 0,
+        cores: '#000000',
+        escudo: 'https://upload.wikimedia.org/wikipedia/pt/thumb/a/ac/CRVascodaGama.png/120px-CRVascodaGama.png',
+        tags: ['vasco', 'gigante da colina', 'vascão', 'crvg']
+    },
+    {
+        titulo: 'Atlético-MG',
+        descricao: 'O Clube Atlético Mineiro, conhecido como Galo, é um dos clubes mais tradicionais do futebol brasileiro.',
+        classificacao: 9,
+        titulosBrasileiros: 2,
+        libertadores: 1,
+        mundiais: 0,
+        cores: '#000000',
+        escudo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Atletico_mineiro_galo.png/120px-Atletico_mineiro_galo.png',
+        tags: ['galo', 'cam', 'atletico mg', 'alvinegro']
+    },
+    {
+        titulo: 'Internacional',
+        descricao: 'O Sport Club Internacional, conhecido como Colorado, é um dos clubes mais vitoriosos do futebol brasileiro e sul-americano.',
+        classificacao: 10,
+        titulosBrasileiros: 3,
+        libertadores: 2,
+        mundiais: 1,
+        cores: '#ff0000',
+        escudo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/Scinternacional1909.png/120px-Scinternacional1909.png',
+        tags: ['inter', 'colorado', 'sci', 'internacional']
+    },
+    {
+        titulo: 'Bragantino',
+        descricao: 'O Red Bull Bragantino é um clube em ascensão no futebol brasileiro, com forte investimento e bons resultados recentes.',
+        classificacao: 11,
+        titulosBrasileiros: 0,
+        libertadores: 0,
+        mundiais: 0,
+        cores: '#ffffff',
+        escudo: 'https://upload.wikimedia.org/wikipedia/pt/thumb/9/9e/RedBullBragantino.png/140px-RedBullBragantino.png',
+        tags: ['red bull', 'bragantino', 'rbb', 'massa bruta']
+    },
+    {
+        titulo: 'Athletico-PR',
+        descricao: 'O Club Athletico Paranaense, também conhecido como Furacão, é um dos principais clubes da região sul do Brasil.',
+        classificacao: 12,
+        titulosBrasileiros: 1,
+        libertadores: 0,
+        mundiais: 0,
+        cores: '#ff0000',
+        escudo: 'https://upload.wikimedia.org/wikipedia/pt/thumb/c/c7/Club_Athletico_Paranaense_2019.png/120px-Club_Athletico_Paranaense_2019.png',
+        tags: ['furacão', 'furacao', 'cap', 'athletico', 'athletico pr']
+    },
+    {
+        titulo: 'Juventude',
+        descricao: 'O Esporte Clube Juventude, com sede em Caxias do Sul, é um dos clubes tradicionais do futebol gaúcho.',
+        classificacao: 13,
+        titulosBrasileiros: 0,
+        libertadores: 0,
+        mundiais: 0,
+        cores: '#00aa00',
+        escudo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/EC_Juventude.svg/120px-EC_Juventude.svg.png',
+        tags: ['juventude', 'juve', 'ecj', 'papo']
+    },
+    {
+        titulo: 'Criciúma',
+        descricao: 'O Criciúma Esporte Clube é um dos principais clubes do sul do Brasil, com destaque nacional.',
+        classificacao: 14,
+        titulosBrasileiros: 0,
+        libertadores: 0,
+        mundiais: 0,
+        cores: '#ffcc00',
+        escudo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/EscudoCriciumaEC.svg/120px-EscudoCriciumaEC.svg.png',
+        tags: ['tigre', 'criciuma', 'cec']
+    },
+    {
+        titulo: 'Grêmio',
+        descricao: 'O Grêmio Foot-Ball Porto Alegrense, também conhecido como Imortal Tricolor, é um dos clubes mais tradicionais do Brasil.',
+        classificacao: 15,
+        titulosBrasileiros: 3,
+        libertadores: 3,
+        mundiais: 1,
+        cores: '#0000ff',
+        escudo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Gremio_logo.svg/120px-Gremio_logo.svg.png',
+        tags: ['gremio', 'imortal', 'tricolor gaúcho', 'gfbpa']
+    },
+    {
+        titulo: 'Corinthians',
+        descricao: 'O Sport Club Corinthians Paulista é um dos clubes mais populares do Brasil, conhecido como Timão.',
+        classificacao: 16,
+        titulosBrasileiros: 7,
+        libertadores: 1,
+        mundiais: 2,
+        cores: '#000000',
+        escudo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/7d/Corinthianssccp2023.png/120px-Corinthianssccp2023.png',
+        tags: ['timao', 'corinthians', 'sccp', 'galinhada']
+    },
+    {
+        titulo: 'Fluminense',
+        descricao: 'O Fluminense Football Club, conhecido como Tricolor das Laranjeiras, é um dos clubes mais tradicionais do Rio de Janeiro.',
+        classificacao: 17,
+        titulosBrasileiros: 4,
+        libertadores: 0,
+        mundiais: 0,
+        cores: '#990000',
+        escudo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/FFC_crest.svg/130px-FFC_crest.svg.png',
+        tags: ['flu', 'fluminense', 'ffc']
+    },
+    {
+        titulo: 'Vitória',
+        descricao: 'O Esporte Clube Vitória, conhecido como Leão, é um dos principais clubes de futebol da Bahia. Com uma torcida apaixonada, o Vitória possui uma história rica, marcada por grandes conquistas e clássicos emocionantes.',
+        classificacao: 18,
+        titulosBrasileiros: 0,
+        libertadores: 0,
+        mundiais: 0,
+        cores: '#990000',
+        escudo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Atl%C3%A9tico_Goianiense.svg/120px-Atl%C3%A9tico_Goianiense.svg.png',
+        tags: ['leão', 'vitoria']
+    },
+    {
+        titulo: "Cuiabá",
+        descricao: "O Cuiabá Esporte Clube é um dos clubes emergentes do futebol brasileiro, representando a região Centro-Oeste.",
+        classificacao: "19º lugar",
+        titulosBrasileiro: 0,
+        titulosLibertadores: 0,
+        titulosMundial: 0,
+        cores: "#006341",
+        escudo: "https://upload.wikimedia.org/wikipedia/pt/thumb/2/20/Cuiab%C3%A1EC2020.png/120px-Cuiab%C3%A1EC2020.png",
+        tags: ['cuiaba', 'cuiabayern', 'dourado']
+    },
+    {
+        titulo: "Atlético-GO",
+        descricao: "O Atlético Goianiense é um dos clubes mais importantes do estado de Goiás e busca se consolidar no cenário nacional.",
+        classificacao: "20º lugar",
+        titulosBrasileiro: 0,
+        titulosLibertadores: 0,
+        titulosMundial: 0,
+        cores: "#FF0000",
+        escudo: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Atl%C3%A9tico_Goianiense.svg/120px-Atl%C3%A9tico_Goianiense.svg.png",
+        tags: ['Dragão', 'dragao']
+    }
+];
